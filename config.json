@@ -1,0 +1,87 @@
+{
+  "urls": {
+    "main": {
+      "path": "/",
+      "controller": "Val\\SweetsShop\\Controllers\\IndexController::indexAction",
+      "method": "GET"
+    },
+    "show product": {
+      "path": "/catalog/{category}/{id}",
+      "controller": "Val\\SweetsShop\\Controllers\\ProductController::showProduct",
+      "method": "GET"
+    },
+    "show selected products": {
+      "path": "/catalog/{category}",
+      "controller": "Val\\SweetsShop\\Controllers\\ProductController::showCategoryProducts",
+      "method": "GET"
+    },
+    "show product form": {
+      "path": "/product-form",
+      "controller": "Val\\SweetsShop\\Controllers\\ProductFormController::showProductForm",
+      "method": "GET"
+    },
+    "insert product": {
+      "path": "/product-form",
+      "controller": "Val\\SweetsShop\\Controllers\\ProductController::addProduct",
+      "method": "POST"
+    },
+    "show registration": {
+      "path": "/registration",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::showRegistration",
+      "method": "GET"
+    },
+    "reg user" : {
+      "path": "/registration",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::regUser",
+      "method": "POST"
+    },
+    "show login" : {
+      "path": "/login",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::showLoginForm",
+      "method": "GET"
+    },
+    "login" : {
+      "path": "/login",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::login",
+      "method": "POST"
+    },
+    "logout" : {
+      "path": "/logout",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::logout",
+      "method": "GET"
+    },
+    "show account category" : {
+      "path": "/account/{category}",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::showAccountCategory",
+      "method": "GET"
+    },
+    "delete product" : {
+      "path": "/account/{category}/{id}",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::removeProduct",
+      "method": "GET"
+    },
+    "add comment" : {
+      "path": "/account/{category}/{id}",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::addComment",
+      "method": "POST"
+    },
+    "update account data" : {
+      "path": "/account",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::updateData",
+      "method": "POST"
+    },
+    "show admin" : {
+      "path": "/admin",
+      "controller": "Val\\SweetsShop\\Controllers\\AccountController::updateData",
+      "method": "POST"
+    }
+  },
+  "db": {
+    "server": "127.0.0.1",
+    "port": "3307",
+    "dbname": "sweetshop",
+    "user": "shop",
+    "pass": "VaLtisch1997",
+    "charset": "utf8"
+  }
+}

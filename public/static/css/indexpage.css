@@ -1,0 +1,228 @@
+﻿
+.background img {
+    width: 100%;
+}
+
+.background {
+    position: relative;
+}
+
+.head {
+    position: absolute;
+    top: 2.5em;
+    font-family: 'Marck Script', cursive;
+    font-weight: lighter;
+    font-size: 3em;
+    color: white;
+}
+
+.text {
+    position: absolute;
+    top: 20em;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.pos {
+    position: absolute;
+    top: 27.5em;
+}
+
+.space {
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+    .space img {
+        height: 100%;
+    }
+
+.caption {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 2.5em;
+    text-align: center;
+}
+
+.caption a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 2.5em;
+    font-size: 0.8em;
+}
+
+.caption img{
+    width: 100%;
+    height: 15em;
+}
+
+.product{
+    background: white;
+    padding: 2em 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+    /*box-shadow: 0 0 1px rgba(0,0,0,0.5);*/
+}
+
+.product_img{
+    margin-right: 1em;;
+}
+
+.info{
+    margin-left: 2em;
+}
+
+.title{
+    font-family: 'Marck Script', cursive;
+    margin-top: 1em;
+}
+
+.description{
+    font-family: 'Marck Script', cursive;
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+.top{
+    margin-top: 2.5em;
+}
+
+.description a{
+    color: #fe3432;
+    text-decoration: none;
+}
+
+.description a:hover{
+    color: #ca1e1d;
+}
+
+.basket-button a{
+    border-radius: 15px;
+    border: 1px solid #fe3432;
+    text-decoration: none;
+    color: black;
+    padding: 0.5em 1em ;
+}
+
+.product_img img{
+    width: 100%;
+    margin-left: 1em;
+}
+
+.comment{
+    background: white;
+    margin-top: 2em;
+    border-radius: 15px;
+    padding-bottom: 2.5em;
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+.comment h1{
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+}
+
+.comment h2{
+    font-family: 'Marck Script', cursive;
+    font-size: 1.2em;
+}
+
+.comment p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+.fcomment{
+    margin-top: 2em;
+}
+
+.fcomment label{
+    font-family: 'Marck Script', cursive;
+    font-weight: bold;
+}
+
+.fcomment textarea{
+    margin-top: 1.2em;
+    width: 40%;
+    height: 30px;
+}
+
+.headpage {
+    font-family: 'Marck Script', cursive;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+    .about img {
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+    }
+
+.center {
+    text-align: center;
+    padding: 0 1em;
+}
+
+.icons {
+    padding-top: 3em;
+}
+
+    .icons img {
+        width: 15%;
+    }
+
+.rect {
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.ident {
+    margin: 1em;
+}
+
+.short {
+    display: block;
+    text-align: center;
+    padding: 2em 0;
+}
+
+    .short img {
+        width: 25%;
+    }
+
+.less {
+    font-size: 0.9em;
+}
+
+.pic {
+    margin: auto 0;
+}
+
+    .pic img {
+        height: 1.5em;
+        width: auto;
+    }
+
+.ser {
+    display: block;
+    margin: auto 0;
+}
+
+.contact {
+    display: block;
+    text-align: right;
+}
+
+.c_note {
+    padding-left: 1em;
+}
+
+.caption a:hover {
+    color: #fe3432;
+    transition: 0.5s;
+}
+

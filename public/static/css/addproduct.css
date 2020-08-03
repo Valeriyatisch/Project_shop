@@ -1,0 +1,37 @@
+﻿
+.add{
+    margin-bottom: 1em;
+}
+
+.add label{
+    font-family: 'Open Sans', sans-serif;
+      
+}
+
+.add input[type="text"], input[type="file"], input[type="number"], input[type="date"], input[type="password"], input[type="email"], textarea, select{
+    margin-top: 0.5em; 
+    width: 40%;
+}
+
+.add input[type="submit"]{
+   
+    margin-top: 1.2em;
+    padding: 0.7em 1.5em;
+    color: white;
+    background: #fe3432;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.add input[type="submit"]:focus {
+    outline: none;
+    outline-offset: 0;
+    background: #ca1e1d;
+}
+
+.error{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    margin: 0.4em;
+    color: red;
+}

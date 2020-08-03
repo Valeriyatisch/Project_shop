@@ -1,0 +1,473 @@
+@import "flex.css";
+@import "indexpage.css";
+@import "form.css";
+@import "addproduct.css";
+
+html{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #f6f1f1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container
+{
+    flex-grow: 1;
+}
+
+.content{
+    max-width: 960px; /*960-1200*/
+    margin: 0 auto;
+}
+
+footer{
+    margin-top: 2em;
+    background: #1c1c1c;
+    flex-grow: 0;
+}
+
+header
+{
+    background: #1c1c1c;
+    flex-grow: 0;
+}
+
+.vertmenu{
+    display: none;
+}
+.account-menu li{
+    list-style: none;
+    margin-bottom: 2em;
+    padding-right: 4em;
+
+}
+
+.account-menu li a{
+    font-family: 'Open Sans', sans-serif;
+    color: #fe3432;
+    text-decoration: none;
+}
+
+.menu{
+    padding: 1em;
+}
+
+ul{
+    margin: 0;
+}
+
+.right li{
+    margin-right: 6em;
+}
+
+.menu li
+{
+    list-style: none;
+
+}
+
+.menu li a
+{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button a
+{
+    font-family: 'Open Sans', sans-serif;
+    background: #fe3432;
+    color: white;
+    text-decoration: none;
+    padding: 0.7em 3em;
+    border-radius: 20px;
+}
+
+.topmargin{
+    margin-top: 6em;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.social{
+    display: block;
+    margin: auto 0;
+    text-align: right;
+}
+
+.social img{
+    width: 3em;
+}
+
+.down li{
+    margin-bottom: 1em;
+}
+
+.sign{
+    color: white;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.cat_menu{
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.cat_menu a {
+    text-decoration: none;
+    margin: 0 1em;
+    color: black;
+}
+
+.cat_menu a:hover{
+    color: #fe3432;
+    /*text-decoration: underline;*/
+}
+
+
+.submenu{
+    padding: 0;
+    position: absolute;
+    background: #1c1c1c;
+    display: none;
+    font-size: 0.9em;
+}
+
+.submenu li{
+    padding: 1em 0em;
+    margin: 0 1em;
+}
+
+.show:hover .submenu{
+    display: block;
+    margin-left: -1em;
+}
+
+ul ul{
+    z-index: 3;
+}
+
+.left li{
+    margin-left: auto;
+    padding-left: 1em;
+}
+
+.menu img{
+    height: 1.5em;
+}
+
+.button :hover{
+    background: #ca1e1d;
+    transition: 0.5s;
+}
+
+.menu a:hover{
+    color: #fe3432;
+}
+
+.sign input[type="email"]{
+    margin-top: 0.5em;
+    height: 1.5em;
+}
+
+.sign input[type="submit"]{
+    border-radius: 1em;
+    height: 2em;
+    background: #fe3432;
+    color: white;
+    border: 0;
+}
+
+.sign input[type="submit"]:focus {
+    outline: none;
+    outline-offset: 0;
+    background: #ca1e1d;
+}
+
+@media screen and (max-width: 450px ) { /*xxs*/
+    .flex-xxs-6{
+        flex: 50%;
+    }
+
+    .flex-xxs-column{
+        flex-direction: column;
+    }
+
+    .left-xxs{
+        text-align: left;
+    }
+
+    .art_text h3{
+    font-size: 0.8em;
+    }
+
+    .art_text {
+        font-size: 0.5em;
+    }
+
+.art_text a{
+    font-size: 0.5em;
+    }
+
+    .flex-xxs-column{
+        flex-direction: column;
+    }
+
+    .basket{
+        margin-left: 0;
+    }
+    .contact img{
+        display: none;
+    }
+
+    .head{
+        top: 1em;
+        font-size: 0.9em;
+        margin-left: 1rem;
+    }
+
+    .text{
+        top: 7em;
+        font-size: 0.7em;
+        margin-left: 1rem;
+    }
+
+    .pos{
+        top: 8.5em;
+        margin-left: 1rem;
+    }
+
+    .button a{
+         font-size: 0.7em;
+    }
+
+    .menu{
+        display: none;
+    }
+     
+    .vertmenu{
+        display: block;
+    }  
+    
+    .vertmenu{
+        padding: 1em;
+    }     
+
+    .headpage{
+        font-size: 1em;
+    }
+
+    .topmargin{
+        margin-top: 1rem;
+    }
+
+.vertmenu li
+{
+    list-style: none;
+    margin-right: 5em;
+    color: white;
+}
+
+.vertmenu li a
+{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}   
+
+.hide {
+    display: none;
+}          
+
+.show_2:hover .hide{
+    display: block;
+}     
+
+.social{
+    margin-top: 1em;
+    text-align: left;
+}
+.sign{
+    margin-top: 1em;
+    text-align: left;
+}
+.add{
+        margin-left: 2rem;
+    }
+.textfield, .radio, .address, button{
+        margin-left: 1rem;
+    }  
+.wrap-xxs{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 700px ) { /*xs*/
+    .flex-xs-6{
+        flex: 50%;
+    }
+                                                               
+    .menu{
+        display: none;
+    }
+     
+    .vertmenu{
+        display: block;
+    }  
+    
+    .vertmenu{
+        padding: 1em;
+    }   
+    
+    .textfield, .radio, .address, button{
+        margin-left: 2rem;
+    }  
+
+.vertmenu li
+{
+    list-style: none;
+    margin-right: 5em;
+    color: white;
+}
+
+.vertmenu li a
+{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}   
+
+.hide {
+    display: none;
+}          
+
+.show_2:hover .hide{
+    display: block;
+}       
+                                                             
+    .contact img{
+        display: none;
+    }
+
+    .art_text {
+        font-size: 1em;
+    }
+
+    .art_text {
+        font-size: 0.7em;
+    }
+
+        .art_text a {
+            font-size: 0.7em;
+        }
+
+    .flex-xs-column {
+        flex-direction: column;
+    }
+
+    .basket {
+        margin-left: 0;
+    }
+
+   .social{
+    margin-top: 1em;
+    text-align: center;
+}
+.sign{
+    margin-top: 1em;
+    text-align: center;
+}
+
+    .head{
+        top: 1em;
+    font-size: 1.2em;
+    margin-left: 1em;
+    }
+
+    .text{
+        top: 8em;
+        font-size: 0.8em;
+        margin-left: 2em;
+    }
+
+    .pos{
+        top: 11em;
+        margin-left: 2em;
+    }
+
+    .button a{
+         font-size: 0.8em;
+    }
+
+    .add{
+        margin-left: 3rem;
+    }
+    .wrap-xs{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) { /*s*/
+    .head{
+     top: 1.5em;
+    font-size: 2em;
+    margin-left: 1em;
+    }
+
+    .text{
+        top: 12em;
+        font-size: 0.9em;
+        margin-left: 2em;
+    }
+
+    .pos{
+        top: 17em;
+        margin-left: 2em;
+    }
+
+    .button a{
+         font-size: 0.9em;
+    }
+
+    .menu{
+    padding: 0.5em;
+    }
+
+    .menu li
+    {
+     margin-right: 2em;
+    }
+
+    .menu li a {
+        font-size: 0.9em;
+    }
+
+    .topmargin{
+        margin-top: 3em;
+    }
+
+    .flex-s-6{
+        flex: 50%;
+    }
+
+    .flex-s-12{
+        flex: 100%;
+    }
+    .textfield, .radio, .address, button{
+        margin-left: 2rem;
+    }
+}

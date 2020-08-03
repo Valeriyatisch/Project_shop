@@ -1,0 +1,41 @@
+﻿.textfield input{
+    width: 90%;
+    padding: 0.5em 0;
+    background: #f6f1f1;
+    border: 1px solid #808080;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2.5em;
+}
+
+.radio h5{
+    margin: 0 0 1.5em 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.radio input{
+    margin-bottom: 1.5em;
+}
+
+.radio label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    margin-right: 3em;
+}
+
+.address input{
+    width: 45%;
+}
+
+button{
+    margin-top: 2em;
+    padding: 0.7em 1.5em;
+    color: white;
+    background: #fe3432;
+    border: none;
+    border-radius: 1.5em;
+}
+
+button:active{
+outline: none;
+background: #ca1e1d;
+}

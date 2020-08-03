@@ -1,0 +1,30 @@
+let validate = require('./validate');
+
+let reg_form = document.forms.registration;
+
+let errorFlag;
+let elems = reg_form.querySelectorAll("input[type=text], input[type=date], input[type=email], input[type=password]");
+
+reg_form.addEventListener('submit', async (event)=>{
+    event.preventDefault();
+
+    errorFlag = false;
+    validate.removeError(reg_form);
+
+    errorFlag = validate.checkField(elems, errorFlag);
+
+    if(!errorFlag)
+    {
+        try{
+            const response = await fetch('/registration', {
+                method: 'POST',
+                body: new FormData(reg_form)
+            });
+            const answer = await response.text();
+            console.log("ответ сервера " + answer);
+            validate.responseHandler(answer);
+        } catch (error) {
+            console.log("ошибка", error);
+        }
+    }
+});
