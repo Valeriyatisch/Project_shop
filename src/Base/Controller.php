@@ -11,7 +11,16 @@ class Controller
 //        var_dump($routeInfo);
         switch ($routeInfo[0]){
             case 0:
-                var_dump("404 NOT FOUND");
+                //var_dump("404 NOT FOUND");
+                //header('Location: /');
+                $content = 'error.php';
+                extract(['page_title' => 'Ошибка']);
+                ob_start(); //вывод в буфер
+                include_once __DIR__ . '/../Views/' . 'template.php';
+                $page = ob_get_contents();
+                ob_end_clean();
+                echo $page;
+
                 break;
             case 2:
                 var_dump("405 Method Not Allowed");

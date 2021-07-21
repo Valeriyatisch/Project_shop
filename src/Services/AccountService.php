@@ -15,11 +15,6 @@ class AccountService extends Service
     const AUTH_ERROR = 'Ошибка авторизации';
     const AUTH_OK = 'Авторизация прошла успешно';
 
-    const PWD_ERROR = 'Неверный пароль';
-    const UPDATE_SUCCESS = 'Данные обновлены';
-    const UPDATE_ERROR = 'Ошибка обновления даанных';
-
-
     public function addUser(array $reg_data)
     {
         //проверка на наличие пользователя в бд
@@ -91,11 +86,11 @@ class AccountService extends Service
     public function update(array $update_data, $old_email)
     {
         $user = $this->getUser($old_email);
-        if(!password_verify($update_data['pwd'], $user['pwd_user']))
-        {
-            return self::PWD_ERROR;
-        }
-        $pwd = password_hash($update_data['newpwd'], PASSWORD_DEFAULT);
+        if($update_data['newpwd'] === '')
+            $pwd = $user['pwd_user'];
+        else
+            $pwd = password_hash($update_data['newpwd'], PASSWORD_DEFAULT);
+
         $sql = 'update user set name_user = :uname, surname_user = :surname, phone_user = :phone, email_user = :email, pwd_user = :newpwd, 
                     bith_user = :bith, address_user = :address where id_user = :id';
         $params = [
@@ -112,8 +107,8 @@ class AccountService extends Service
         if($this->dbConnection->executeSql($sql, $params))
         {
             $_SESSION['email'] = $update_data['email'];
-            return self::UPDATE_SUCCESS;
+            return 1;
         }
-        return self::UPDATE_ERROR;
+        return 0;
     }
 }

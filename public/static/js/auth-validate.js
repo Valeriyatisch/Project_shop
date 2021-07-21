@@ -11,6 +11,7 @@ auth_form.addEventListener('submit', async (event)=>{
     errorFlag = false;
     validate.removeError(auth_form);
 
+    elems = validate.trimElem(elems);
     errorFlag = validate.checkField(elems, errorFlag);
 
     if(!errorFlag)
@@ -22,9 +23,25 @@ auth_form.addEventListener('submit', async (event)=>{
             });
             const answer = await response.text();
             console.log("ответ сервера " + answer);
-            validate.responseHandler(answer);
+            responseHandler(answer);
         } catch (error) {
             console.log("ошибка", error);
         }
     }
 });
+
+function responseHandler(answer)
+{
+    if(answer === validate.AUTH_OK)
+    {
+        window.location.replace('/account/addto');
+    }
+    else if(answer === validate.AUTH_ERROR)
+    {
+        alert(validate.AUTH_ERROR);
+    }
+    else
+    {
+        alert(answer);
+    }
+}

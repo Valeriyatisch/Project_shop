@@ -29,6 +29,13 @@ class DBService extends Service
         return $name;
     }
 
+    public function getCategoryById($id)
+    {
+        $sql = 'select * from category where id_category = :id';
+        $category = $this->dbConnection->execute($sql, ['id' => $id], false);
+        return $category;
+    }
+
     public  function getNameProvider($id)
     {
         $sql = 'select name_provider from provider where id_provider = :id';

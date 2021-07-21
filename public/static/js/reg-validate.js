@@ -11,6 +11,7 @@ reg_form.addEventListener('submit', async (event)=>{
     errorFlag = false;
     validate.removeError(reg_form);
 
+    elems = validate.trimElem(elems);
     errorFlag = validate.checkField(elems, errorFlag);
 
     if(!errorFlag)
@@ -22,9 +23,29 @@ reg_form.addEventListener('submit', async (event)=>{
             });
             const answer = await response.text();
             console.log("ответ сервера " + answer);
-            validate.responseHandler(answer);
+            responseHandler(answer);
         } catch (error) {
             console.log("ошибка", error);
         }
     }
 });
+
+function responseHandler(answer)
+{
+    if(answer === validate.REGISTRATION_SUCCESS)
+    {
+        window.location.replace('/login');
+    }
+    else if(answer === validate.USER_EXISTS)
+    {
+        alert(validate.USER_EXISTS);
+    }
+    else if(answer === validate.REGISTRATION_ERROR)
+    {
+        alert(validate.REGISTRATION_ERROR);
+    }
+    else
+    {
+        alert(answer);
+    }
+}

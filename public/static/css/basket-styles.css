@@ -1,0 +1,107 @@
+.basket-product img{
+    width: 20%;
+}
+
+.basket-lmargin{
+    margin-left: 2em;
+}
+
+.l-button
+{
+    margin-right: 10px!important;
+}
+
+.r-button
+{
+    margin-left: 10px!important;
+}
+
+.card h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+.card p{
+    font-size: 0.8em;
+}
+
+.card button{
+    margin: 0;
+    padding: 10px;
+    background: none;
+    color: #1c1c1c;
+    font-size: 1em;
+    border-radius: 0;
+}
+
+.card button:hover{
+    background: lightgray;
+}
+
+.basket-count{
+    color: #fe3432!important;
+}
+
+.basket-count p{
+    margin: 0;
+}
+
+.product-price{
+    margin-left: auto;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+.product-delete{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+}
+
+.product-delete:hover{
+    color: #fe3432;
+}
+
+.product-border
+{
+    border: 1px solid #808080;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#zatemnenie {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+#okno {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 30px;
+    color: #1c1c1c;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+}
+#zatemnenie:target {display: none;}
+.close {
+    display: inline-block;
+    color: #1c1c1c;
+    padding: 0 12px;
+    margin: 30px;
+    text-decoration: none;
+    font-size: 10pt;
+    cursor:pointer;
+}
+.close:hover {color: #fe3432;}

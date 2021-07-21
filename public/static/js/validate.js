@@ -1,7 +1,7 @@
 import validator from 'validator';
 
-export const SUCCESS = 1;
-export const ERROR = 0;
+
+export const ERROR = '0';
 export const REGISTRATION_SUCCESS = 'Регистрация прошла успешно';
 export const REGISTRATION_ERROR = 'Ошибка регистрации';
 export const USER_EXISTS = 'Пользователь с таким логином уже существует';
@@ -10,7 +10,6 @@ export const AUTH_OK = 'Авторизация прошла успешно';
 export const PWD_ERROR = 'Неверный пароль';
 export const UPDATE_SUCCESS = 'Данные обновлены';
 export const UPDATE_ERROR = 'Ошибка обновления даанных';
-
 
 export let rules = {
     "uname":{
@@ -32,11 +31,6 @@ export let rules = {
         type: "email"
     },
     "pwd" : {
-        required: true,
-        minLength: 5,
-        maxLength: 10
-    },
-    "newpwd" : {
         required: true,
         minLength: 5,
         maxLength: 10
@@ -68,7 +62,8 @@ export let rules = {
     },
     "weight" : {
         required: true,
-        type: "float"
+        type: "float",
+        min: 0.1
     },
     "price": {
         required: true,
@@ -90,6 +85,9 @@ export let rules = {
     "img": {
         required: true,
         type: "img"
+    },
+    "comment": {
+        required: true
     }
 };
 
@@ -206,47 +204,15 @@ export function removeError(form)
         errors[i].remove();
 }
 
-export function responseHandler(answer)
+export function checkEmpty(value)
 {
-    if (answer === ERROR)
-    {
-        alert("Ошибка добавления данных");
-    }
-    else if (answer === SUCCESS)
-    {
-        window.location.replace('/');
-    }
-    else if(answer === AUTH_OK)
-    {
-        window.location.replace('/');
-    }
-    else if(answer === AUTH_ERROR)
-    {
-        alert(AUTH_ERROR);
-    }
-    else if(answer === USER_EXISTS)
-    {
-        alert(USER_EXISTS);
-    }
-    else if(answer === REGISTRATION_SUCCESS)
-    {
-        window.location.replace('/login');
-    }
-    else if(answer === REGISTRATION_ERROR)
-    {
-        alert(REGISTRATION_ERROR);
-    }
-    else if(answer === PWD_ERROR)
-    {
-        alert(PWD_ERROR);
-    }
-    else if(answer === UPDATE_ERROR)
-    {
-        alert(UPDATE_ERROR);
-    }
-    else if(answer === UPDATE_SUCCESS)
-    {
-        alert(UPDATE_SUCCESS);
-        window.location.replace('/account');
-    }
+    return validator.isEmpty(value, { ignore_whitespace: true });
+}
+
+export function trimElem(elems)
+{
+    for(let i = 0; i < elems.length; i++)
+        elems[i].value = elems[i].value.trim();
+
+    return elems;
 }

@@ -7,7 +7,7 @@
                 Интернет-магазин <br>тортов и десертов
             </h1>
             <p class="text">Мы изготовим сладкий шедевр любого размера <br>и формы по вашему желанию</p>
-            <div class="button pos"><a href="catalog.html">Каталог</a></div>
+            <div class="button pos"><a href="/catalog/all">Каталог</a></div>
         </div>
     </div>
 </div>
@@ -17,39 +17,27 @@
     <h1 class="headpage">Выбери свой вкус</h1>
 
     <div class="flex-row wrap">
-        <div class="flex-3 caption flex-xs-6 flex-xxs-6">
-            <div class="space">
-                <img src="static/img/cakestraw.jpg" />
+        <div class="flex-3 flex-xs-6 flex-xxs-6 caption space">
+            <div class="product">
+                <img src="static/img/cakestraw.png" />
                 <h5>Клубничное пирожное</h5>
                 <p>135 руб.</p>
-                <a href="#">В корзину</a>
             </div>
         </div>
 
-        <div class="flex-3 caption flex-xs-6 flex-xxs-6">
-            <div class=" space">
-                <img src="static/img/cheesecakes.jpg" />
+        <div class="flex-3 caption flex-xs-6 flex-xxs-6 caption space">
+            <div class="product">
+                <img src="static/img/choco.png" />
+                <h5>Шоколадное пирожное</h5>
+                <p>140 руб.</p>
+            </div>
+        </div>
+
+        <div class="flex-3 caption flex-xs-6 flex-xxs-6 caption space">
+            <div class="product">
+                <img src="static/img/cheesecakes.png" />
                 <h5>Малиновый чизкейк</h5>
                 <p>110 руб.</p>
-                <a href="#">В корзину</a>
-            </div>
-        </div>
-
-        <div class="flex-3 caption flex-xs-6 flex-xxs-6">
-            <div class=" space">
-                <img src="static/img/chocolate.jpg" />
-                <h5>Шоколодное пирожное</h5>
-                <p>150 руб.</p>
-                <a href="#">В корзину</a>
-            </div>
-        </div>
-
-        <div class="flex-3 caption flex-xs-6 flex-xxs-6">
-            <div class=" space">
-                <img src="static/img/red.jpg" />
-                <h5>Клубнично-малиновое пирожное</h5>
-                <p>140 руб.</p>
-                <a href="#">В корзину</a>
             </div>
         </div>
     </div>
@@ -63,15 +51,15 @@
         <div class="flex-6 flex-xs-12 space">
             <div class="about"><img src="static/img/man.jpg" /></div>
             <p class="center less">
-                Мы современная пекарня, которая изготавливает торты, пироги, пирожные и другие десерты на заказ для всех желающих, <br />также и для
-                баров, ресторанов, кафе и кафеен.
+                Мы современный интернет-магазин сладостей, в котором можно заказать торты, пироги, пирожные и другие десерты. <br />
+                Также мы сотрудничаем с барами, ресторанами, кафе и кафеенами.
             </p>
         </div>
 
         <div class="flex-6 space">
             <div class="about"><img src="static/img/ing.jpg" /></div>
             <p class="center less">
-                Мы используем исключительно натуральные ингридиенты, и эта политика компании не меняется на протяжении многих лет, несмотря ни на какие обстоятельства.
+                Мы продаем продукцию из натуральных ингридиентов, и эта политика компании не меняется на протяжении многих лет, несмотря ни на какие обстоятельства.
             </p>
         </div>
     </div>
@@ -104,7 +92,7 @@
                     Сделайте подарок <br>любимым
                 </h1>
                 <p class="text">Выберите любой десерт, и мы упакуем его в праздничную коробку <br />и красиво оформим.</p>
-                <div class="button pos"><a href="catalog.html">Выбрать</a></div>
+                <div class="button pos"><a href="/catalog/all">Выбрать</a></div>
             </div>
         </div>
     </div>

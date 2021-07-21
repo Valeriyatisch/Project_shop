@@ -1,8 +1,5 @@
 <div class="content">
     <h1 class="headpage">Личный кабинет</h1>
-    <ul class="account-menu flex-row flex-center">
-        <li><a href="#">Мои данные</a></li>
-    </ul>
 
     <div>
         <form name="dataform">
@@ -27,13 +24,8 @@
             </div>
 
             <div class="add">
-                <label for="pwd">Старый пароль: </label><br />
-                <input id="pwd" name="pwd" type="password" min="5" max="10" required>
-            </div>
-
-            <div class="add">
                 <label for="newpwd">Новый пароль: </label><br />
-                <input id="newpwd" name="newpwd" type="password" min="5" max="10" required>
+                <input id="newpwd" name="newpwd" type="password" min="5" max="10">
             </div>
 
             <div class="add">
@@ -47,7 +39,7 @@
             </div>
 
             <div class="add">
-                <input type="submit" value="Изменить" />
+                <input type="submit" value="Сохранить" />
             </div>
         </form>
     </div>

@@ -55,8 +55,7 @@ class Application
 
 
         if (!$response instanceof Response){
-            throw new \LogicException(
-                "Problem with Response");
+            throw new \LogicException("Problem with Response");
         }
         // метод возвращает ответ (объект Response), ответ отправляется в index.php
         return $response;

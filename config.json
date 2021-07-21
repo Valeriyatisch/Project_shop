@@ -10,6 +10,21 @@
       "controller": "Val\\SweetsShop\\Controllers\\ProductController::showProduct",
       "method": "GET"
     },
+    "check count product": {
+      "path": "/check",
+      "controller": "Val\\SweetsShop\\Controllers\\BasketController::checkCount",
+      "method": "POST"
+    },
+    "minus product": {
+      "path": "/minus",
+      "controller": "Val\\SweetsShop\\Controllers\\BasketController::minusCount",
+      "method": "POST"
+    },
+    "delete product from basket": {
+      "path": "/delete",
+      "controller": "Val\\SweetsShop\\Controllers\\BasketController::deleteProductFromBasket",
+      "method": "POST"
+    },
     "show selected products": {
       "path": "/catalog/{category}",
       "controller": "Val\\SweetsShop\\Controllers\\ProductController::showCategoryProducts",
@@ -57,7 +72,7 @@
     },
     "delete product" : {
       "path": "/account/{category}/{id}",
-      "controller": "Val\\SweetsShop\\Controllers\\AccountController::removeProduct",
+      "controller": "Val\\SweetsShop\\Controllers\\ProductController::removeProduct",
       "method": "GET"
     },
     "add comment" : {
@@ -70,10 +85,10 @@
       "controller": "Val\\SweetsShop\\Controllers\\AccountController::updateData",
       "method": "POST"
     },
-    "show admin" : {
-      "path": "/admin",
-      "controller": "Val\\SweetsShop\\Controllers\\AccountController::updateData",
-      "method": "POST"
+    "show basket": {
+      "path": "/basket",
+      "controller": "Val\\SweetsShop\\Controllers\\BasketController::show",
+      "method": "GET"
     }
   },
   "db": {
@@ -85,3 +100,4 @@
     "charset": "utf8"
   }
 }
+

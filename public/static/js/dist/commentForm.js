@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./public/static/js/account-validate.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./public/static/js/add-comment.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1226,14 +1226,14 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
-/***/ "./public/static/js/account-validate.js":
-/*!**********************************************!*\
-  !*** ./public/static/js/account-validate.js ***!
-  \**********************************************/
+/***/ "./public/static/js/add-comment.js":
+/*!*****************************************!*\
+  !*** ./public/static/js/add-comment.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("let validate = __webpack_require__(/*! ./validate */ \"./public/static/js/validate.js\");\r\n\r\nlet data_form = document.forms.dataform;\r\n\r\nlet errorFlag;\r\nlet elems = data_form.querySelectorAll(\"input[type=text], input[type=date], input[type=email]\");\r\nlet newPWD = data_form.querySelectorAll(\"input[type=password]\");\r\nlet pwdFlag;\r\n\r\ndata_form.addEventListener('submit', async (event)=>{\r\n    event.preventDefault();\r\n\r\n    errorFlag = false;\r\n    pwdFlag = false;\r\n    validate.removeError(data_form);\r\n\r\n    elems = validate.trimElem(elems);\r\n    newPWD = validate.trimElem(newPWD);\r\n    errorFlag = validate.checkField(elems, errorFlag);\r\n\r\n    if(!validate.checkEmpty(newPWD[0].value))\r\n    {\r\n        let check = validate.functions.minLength(newPWD[0].value, 5);\r\n        if(check)\r\n        {\r\n            validate.createError(check, newPWD[0]);\r\n            pwdFlag = true;\r\n        }\r\n\r\n        check = validate.functions.maxLength(newPWD[0].value, 10);\r\n        if(check)\r\n        {\r\n            validate.createError(check, newPWD[0]);\r\n            pwdFlag = true;\r\n        }\r\n    }\r\n\r\n    if(!errorFlag && !pwdFlag)\r\n    {\r\n        try{\r\n            const response = await fetch('/account', {\r\n                method: 'POST',\r\n                body: new FormData(data_form)\r\n            });\r\n            const answer = await response.text();\r\n            console.log(\"ответ сервера \" + answer);\r\n            responseHandler(answer);\r\n        } catch (error) {\r\n            console.log(\"ошибка\", error);\r\n        }\r\n    }\r\n});\r\n\r\nfunction responseHandler(answer)\r\n{\r\n    if(answer === '1')\r\n    {\r\n        alert('Данные сохранены');\r\n    }\r\n    else if(answer === '0')\r\n    {\r\n        alert('Неудалось обновить данные');\r\n    }\r\n    else\r\n    {\r\n        alert(answer);\r\n    }\r\n}\n\n//# sourceURL=webpack:///./public/static/js/account-validate.js?");
+eval("let validate = __webpack_require__(/*! ./validate */ \"./public/static/js/validate.js\");\r\n\r\nlet dataPhp_1 = document.querySelector('.data-php').getAttribute('data-id');\r\nlet dataPhp_2 = document.querySelector('.data').getAttribute('data-name');\r\n\r\nlet errorFlag;\r\nlet comment_form = document.forms.comm;\r\nlet elems = comment_form.querySelectorAll(\"textarea\");\r\n\r\ncomment_form.addEventListener('submit', async (event)=>{\r\n    event.preventDefault();\r\n\r\n    errorFlag = false;\r\n    validate.removeError(comment_form);\r\n\r\n    elems = validate.trimElem(elems);\r\n    errorFlag = validate.checkField(elems, errorFlag);\r\n\r\n    if(!errorFlag)\r\n    {\r\n        try{\r\n            const response = await fetch(`/account/${dataPhp_2}/${dataPhp_1}`, {\r\n                method: 'POST',\r\n                body: new FormData(comment_form)\r\n            });\r\n            const answer = await response.text();\r\n            console.log(\"ответ сервера \" + answer);\r\n            responseHandler(answer);\r\n        } catch (error) {\r\n            console.log(\"ошибка\", error);\r\n        }\r\n    }\r\n});\r\n\r\nfunction responseHandler(answer)\r\n{\r\n    if(answer === '1')\r\n        window.location.replace(`/catalog/${dataPhp_2}/${dataPhp_1}`);\r\n    else if(answer === '0')\r\n        alert('Ошибка добавления данных!');\r\n    else\r\n        alert(answer);\r\n}\n\n//# sourceURL=webpack:///./public/static/js/add-comment.js?");
 
 /***/ }),
 

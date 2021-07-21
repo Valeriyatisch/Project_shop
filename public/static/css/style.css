@@ -2,6 +2,7 @@
 @import "indexpage.css";
 @import "form.css";
 @import "addproduct.css";
+@import "basket-styles.css";
 
 html{
     height: 100%;
@@ -196,6 +197,12 @@ ul ul{
     outline: none;
     outline-offset: 0;
     background: #ca1e1d;
+}
+
+.notfound{
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    margin-top: 5em;
 }
 
 @media screen and (max-width: 450px ) { /*xxs*/

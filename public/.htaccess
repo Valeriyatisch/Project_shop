@@ -7,3 +7,4 @@ RewriteCond %{REQUEST_URI}% !^/static/
 
 RewriteRule ^(.*)$ index.php [L,QSA]
 </IfModule>
+php_value display_errors off

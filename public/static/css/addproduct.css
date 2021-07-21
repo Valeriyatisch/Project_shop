@@ -35,3 +35,16 @@
     margin: 0.4em;
     color: red;
 }
+
+.line {
+    text-decoration: line-through;
+    /*font-size: 6em;*/
+}
+
+.m-left{
+    margin-left: 0.5em;
+}
+
+.up{
+    margin-top: -1em;
+}

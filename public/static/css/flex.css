@@ -3,6 +3,10 @@
     flex-direction: row;
 }
 
+.cent{
+    justify-content: center;
+}
+
 .flex-center{
     justify-content: space-between;
 }

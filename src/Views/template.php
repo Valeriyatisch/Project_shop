@@ -15,14 +15,14 @@
         <li class="show">
             <a href="/catalog/all">Каталог</a>
             <ul class="submenu">
-                <li><a href="/catalog">Торты</a></li>
-                <li><a href="/catalog">Пирожные</a></li>
-                <li><a href="/catalog">Пироги</a></li>
-                <li><a href="/catalog">Печенье</a></li>
+                <li><a href="/catalog/1">Торты</a></li>
+                <li><a href="/catalog/2">Пирожные</a></li>
+                <li><a href="/catalog/3">Печенье</a></li>
+                <li><a href="/catalog/4">Пироги</a></li>
             </ul>
         </li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="/#paydel">Доставка и оплата</a></li>
+        <li><a href="/#cont">Контакты</a></li>
     </ul>
 
     <ul class="flex-2 flex-row menu left">
@@ -37,7 +37,24 @@
                 <?php endif; ?>
             </ul>
         </li>
-        <li><a href="#"><img src="/static/img/basket.png" /></a></li>
+        <li>
+            <a href="/basket" class="flex-row basket-count">
+                <img src="/static/img/basket.png"/>
+                <p id="card-count">
+                    <?php
+                        if(isset($_SESSION['basket']))
+                        {
+                            $count = 0;
+                            foreach ($_SESSION['basket'] as $value)
+                            {
+                                $count+= $value['current_count'];
+                            }
+                            echo $count;
+                        }
+                    ?>
+                </p>
+            </a>
+        </li>
     </ul>
     </div>
 
@@ -49,16 +66,16 @@
                 <li class="show">
                     <a href="catalog.html">Каталог</a>
                     <ul class="submenu">
-                        <li><a href="catalog.html">Торты</a></li>
-                        <li><a href="catalog.html">Пирожные</a></li>
-                        <li><a href="catalog.html">Пироги</a></li>
-                        <li><a href="catalog.html">Печенье</a></li>
+                        <li><a href="/catalog/1">Торты</a></li>
+                        <li><a href="/catalog/2">Пирожные</a></li>
+                        <li><a href="/catalog/3">Пироги</a></li>
+                        <li><a href="/catalog/4">Печенье</a></li>
                     </ul>
                 </li>
                 <li><a href="index.html#paydel">Доставка и оплата</a></li>
                 <li><a href="index.html#cont">Контакты</a></li>
                 <li><a href="blog.html">Блог</a></li>
-                <li class="basket"><a href="#"><img src="/static/img/basket.png" /></a></li>
+                <li class="basket"><a href="/basket"><img src="/static/img/basket.png" /></a></li>
             </ul>
         </li>
     </ul>
@@ -71,9 +88,9 @@
 <footer>
     <div class="content flex-row flex-xs-column flex-xxs-column">
         <ul class="flex-4 menu down">
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="index.html#paydel">Доставка и оплата</a></li>
-            <li><a href="blog.html">Контакты</a></li>
+            <li><a href="/catalog/all">Каталог</a></li>
+            <li><a href="/#paydel">Доставка и оплата</a></li>
+            <li><a href="/#cont">Контакты</a></li>
         </ul>
 
         <div class="flex-4 flex-row social flex-xs-column">
@@ -83,6 +100,8 @@
         </div>
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/static/js/basket.js"></script>
 </body>
 </html>
 
